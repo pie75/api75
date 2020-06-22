@@ -1,0 +1,8 @@
+directories:
+
+- title: Home
+  url: /
+- title: Starbed
+  url: /a/stories/starbed.html
+- title: TESTS
+  url: /a/tests
