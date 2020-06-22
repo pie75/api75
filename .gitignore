@@ -1,0 +1,11 @@
+_site
+.sass-cache
+Gemfile.lock
+*.gem
+_sass
+docs
+script
+.travis.yml
+.rubocop.yml
+*.gemspec
+LICENSE
