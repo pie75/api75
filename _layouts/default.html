@@ -170,7 +170,9 @@
       <div class="navbar-outer">
         <div class="navbar-inner">
           <!-- Header/Root -->
-          <div class="nav-item"><a href="/a/">[]A://</a></div><br>
+          {% for item in site.data.directories.root %}
+            <div class="nav-item"><a href="{{item.url}}">[]A://</a></div><br>
+          {% endfor %}
           <!-- Post Links -->
           <!-- C-CH Memories -->
           <div class="accordion">├─[]C-logs/</div>
