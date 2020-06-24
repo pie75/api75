@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en">
   <head>
 
     {% if site.google_analytics %}
@@ -14,39 +14,216 @@
     <meta charset="UTF-8">
 
 {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- Bootstrap CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- clear links JS Script by Jonathan Snook -->
+	  <script type="text/javascript" src="/assets/js/clearlink.js"></script>
+
+    <style>      
+      a:link {
+          color:#509810;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      a:visited {
+          color:#509810;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      a:hover {
+          color:#A0C060;
+          background-color:#284808;
+          text-decoration: none;
+      }
+      a:active {
+          color:#E04040;
+          background-color:#401008;
+          text-decoration: none;
+      }
+
+      .logo-header {
+          height:64px
+      }
+      .main-header {
+          margin-top:0px;
+          height:50px;
+          text-align:left;
+          font-size:32px;
+      }
+      .sub-header {
+          padding-left:16px;
+          text-align:left;
+          font-size:16px;
+      }
+      .navbar-outer {
+          min-width:256px;
+          float:left;
+          margin-bottom:16px;
+      }
+      .navbar-inner {
+          border-style:solid;
+          border-width:0.875px 2px;
+          padding:8px 8px 12px 8px;
+          color:#2B3305;
+          margin-right:14px;
+          font: size 16px;
+      }
+      .content-bar {
+          display:block;
+          border-style:double;
+          border-width:3px 5px;
+          font-size:16px;
+          line-height-step: 0px;
+          padding:0px 16px;
+          background-color:#0B1600;
+          color:#2B3305;
+          margin-left:0px !important;
+          margin-right:14px !important;
+          overflow:auto;
+          word-wrap: normal !important;
+          max-width:calc(100% - 256px);
+      }
+      
+      .accordion {
+          color:#509810;
+          cursor:pointer;
+      }
+      .accordion:hover{
+          color:#A0C060 !important; 
+          background-color:#284808;
+          cursor:pointer;
+      }
+      .accordion:active{
+          color:#E04040 !important;
+          background-color:#401008;
+          cursor:pointer;
+      }
+      .panel {
+          display:none;
+      }
+      .nav-item {
+          height:0px;
+      }
+      a.nav-item-current:link{
+          color:#2B3305;
+      }
+      
+      @media screen and (max-width:668px) {
+          .logo-header {
+              height:100%;
+          }
+          .main-header {
+              font-size:24px;
+          }
+          .sub-header {
+              font-size:16px;
+              padding-left:10px;
+          }
+          .navbar-outer {
+              min-width:100%;
+              width: 100%;
+          }
+          .navbar-inner {
+              font-size:32px;
+              line-height:27px;
+          }
+          .content-bar {
+              max-width:100% !important;
+              font-size:24px;
+              line-height:24px;
+          }
+      }
+    </style>
   </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <ul>
-      {% for item in site.data.directorylist.directories %}
-        <li>
-          <a href="{{ item.url}}">{{item.title}}</a>
-        </li>
-      {% endfor %}
-    </ul>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-    </header>
+  <body style="display:block;background-color:#000800">
+    <!-- Title Bar -->
+    <div style="display:flex;border-style:solid;border-width:0.875px 2px;width:device-width;margin:3.5px 7px;color:#801010">
+      <a href="/" style="background-color: transparent">
+          <img src="/assets/images/Visor_Web.svg" alt="SVG" title="Return to A://" style="margin:-6px -4px 0px 4px" class="logo-header">
+      </a>
+      <h1 style="padding:0px 0px 10px 0px;background-color:#000800;color:#801010">
+          <span class="main-header">{{site.title}}</span><br>
+          <span class="sub-header">{{site.description}}</span>
+      </h1>
+    </div>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">THERE ARE THINGS HERE<a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-    </main>
+    <!-- Website -->
+    <div style="margin:12px 7px;width:100%">
+      <!-- Navigation Bar (Left Side) -->
+      <div class="navbar-outer">
+        <div class="navbar-inner">
+          <!-- Header/Root -->
+          <div class="nav-item"><a href="/a">[]A://</a></div><br>
+          <!-- Post Links -->
+          <div class="accordion">├─[]C-logs/</div>
+          <div class="panel">
+            {% for item in site.data.directories.clogs %}
+              <div class="nav-item"><a href="{{ item.url}}">│ └─[]{{item.title}}</a></div></br>
+            {% endfor %}
+            <div class="accordion">│ ├─[]CH0/</div>
+            <div class="panel">
+              {% for item in site.data.directories.chlogs0 %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            <div class="accordion">│ ├─[]CH1/</div>
+            <div class="panel">
+              {% for item in site.data.directories.chlogs1 %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="accordion">├─[]FutureMemories/</div>
+          <div class="panel">
+            <div class="accordion">│ ├─[]E&C/</div>
+            <div class="panel">
+              {% for item in site.data.directories.EC %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            {% for item in site.data.directories.future %}
+              <div class="nav-item"><a href="{{ item.url}}">│ └─[]{{item.title}}</a></div></br>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Content Bar (Right Side) -->
+      <div class="content-bar">
+          <h1 style="margin-top:4px;background-color:#801010"> {{page.title}} </h1>
+          <div style="padding-top:8px;padding-bottom:8px;color:#A0C060;white-space:pre"> {{content}} </div>
+      </div>
+    </div>
   </body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+    
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            this.style.color = "#509810"
+            } else {
+            panel.style.display = "block";
+            this.style.color = "#2B3305"
+            }
+        });
+    }
+    </script>
 </html>
