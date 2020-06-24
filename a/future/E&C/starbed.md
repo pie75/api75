@@ -2,7 +2,6 @@
 layout: default
 title: "Starbed"
 ---
-
 The hulking EVA suit slowed from its brisk jog, down the dark, eery corridors.
 
 "This should be far enough away. Alone... Safe, for now...", I mumble.

@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Bootstrap CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <!-- clear links JS Script by Jonathan Snook -->
 	  <script type="text/javascript" src="/assets/js/clearlink.js"></script>
 
@@ -71,6 +71,7 @@
           margin-right:14px;
           font: size 16px;
       }
+      
       .content-bar {
           display:block;
           border-style:double;
@@ -80,11 +81,22 @@
           padding:0px 16px;
           background-color:#0B1600;
           color:#2B3305;
-          margin-left:0px !important;
-          margin-right:14px !important;
           overflow:auto;
-          word-wrap: normal !important;
+          word-wrap: break-word !important;
           max-width:calc(100% - 256px);
+      }
+      .content-title {
+          margin-top:4px;
+          background-color:#801010;
+          color:#000800;
+      }
+      .content-body {
+          padding-top:8px;
+          padding-bottom:8px;
+          color:#A0C060;
+      }
+      pre {
+          color:#A0C060;
       }
       
       .accordion {
@@ -106,6 +118,7 @@
       }
       .nav-item {
           height:0px;
+          white-space:pre;
       }
       a.nav-item-current:link{
           color:#2B3305;
@@ -129,11 +142,12 @@
           .navbar-inner {
               font-size:32px;
               line-height:27px;
+              margin:0px
           }
           .content-bar {
               max-width:100% !important;
-              font-size:24px;
-              line-height:24px;
+              font-size:16px;
+              line-height:16px;
           }
       }
     </style>
@@ -143,9 +157,7 @@
   <body style="display:block;background-color:#000800">
     <!-- Title Bar -->
     <div style="display:flex;border-style:solid;border-width:0.875px 2px;width:device-width;margin:3.5px 7px;color:#801010">
-      <a href="/" style="background-color: transparent">
-          <img src="/assets/images/Visor_Web.svg" alt="SVG" title="Return to A://" style="margin:-6px -4px 0px 4px" class="logo-header">
-      </a>
+        <img src="/assets/images/Visor_Web.svg" alt="SVG" style="margin:-6px -4px 0px 4px" class="logo-header">
       <h1 style="padding:0px 0px 10px 0px;background-color:#000800;color:#801010">
           <span class="main-header">{{site.title}}</span><br>
           <span class="sub-header">{{site.description}}</span>
@@ -153,17 +165,18 @@
     </div>
 
     <!-- Website -->
-    <div style="margin:12px 7px;width:100%">
+    <div style="padding:12px 7px;width:100%">
       <!-- Navigation Bar (Left Side) -->
       <div class="navbar-outer">
         <div class="navbar-inner">
           <!-- Header/Root -->
-          <div class="nav-item"><a href="/a">[]A://</a></div><br>
+          <div class="nav-item"><a href="/a/">[]A://</a></div><br>
           <!-- Post Links -->
+          <!-- C-CH Memories -->
           <div class="accordion">├─[]C-logs/</div>
           <div class="panel">
             {% for item in site.data.directories.clogs %}
-              <div class="nav-item"><a href="{{ item.url}}">│ └─[]{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
             {% endfor %}
             <div class="accordion">│ ├─[]CH0/</div>
             <div class="panel">
@@ -171,23 +184,72 @@
                 <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
               {% endfor %}
             </div>
-            <div class="accordion">│ ├─[]CH1/</div>
+            <div class="accordion">│ └─[]CH1/</div>
             <div class="panel">
               {% for item in site.data.directories.chlogs1 %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│   └─[]{{item.title}}</a></div></br>
               {% endfor %}
             </div>
           </div>
+          <!-- Dog Tags -->
+          <div class="accordion">├─[]Dogtags/</div>
+          <div class="panel">
+            <div class="accordion">│ ├─[]C/</div>
+            <div class="panel">
+              {% for item in site.data.directories.dlogsc %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            <div class="accordion">│ ├─[]D/</div>
+            <div class="panel">
+              {% for item in site.data.directories.dlogsd %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            <div class="accordion">│ ├─[]E/</div>
+            <div class="panel">
+              {% for item in site.data.directories.dlogse %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            <div class="accordion">│ ├─[]F/</div>
+            <div class="panel">
+              {% for item in site.data.directories.dlogsf %}
+                <div class="nav-item"><a href="{{ item.url}}">│   └─[>{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+            <div class="accordion">│ └─[]G/</div>
+            <div class="panel">
+              {% for item in site.data.directories.dlogsg %}
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
+          </div>
+          <!-- Stories from the Future -->
           <div class="accordion">├─[]FutureMemories/</div>
           <div class="panel">
             <div class="accordion">│ ├─[]E&C/</div>
             <div class="panel">
               {% for item in site.data.directories.EC %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
               {% endfor %}
             </div>
             {% for item in site.data.directories.future %}
-              <div class="nav-item"><a href="{{ item.url}}">│ └─[]{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
+            {% endfor %}
+          </div>
+          <!-- Reviews -->
+          <div class="accordion">├─[]Reviews/</div>
+          <div class="panel">
+            {% for item in site.data.directories.revvg %}
+              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
+            {% endfor %}
+          </div>
+          <!-- Essays -->
+          <div class="accordion">└─[]Essays/</div>
+          <div class="panel">
+            {% for item in site.data.directories.essay %}
+              <div class="nav-item"><a href="{{ item.url}}">  └─[>{{item.title}}</a></div></br>
             {% endfor %}
           </div>
         </div>
@@ -195,8 +257,10 @@
       
       <!-- Content Bar (Right Side) -->
       <div class="content-bar">
-          <h1 style="margin-top:4px;background-color:#801010"> {{page.title}} </h1>
-          <div style="padding-top:8px;padding-bottom:8px;color:#A0C060;white-space:pre"> {{content}} </div>
+          {% if page.title != "" %}
+            <h1 class="content-title"> {{page.title}} </h1>
+          {% endif %}
+          <div class="content-body"> {{content}} </div>
       </div>
     </div>
   </body>
