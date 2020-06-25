@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Bootstrap CSS -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- clear links JS Script by Jonathan Snook -->
 	  <script type="text/javascript" src="/assets/js/clearlink.js"></script>
 
@@ -43,6 +43,15 @@
           background-color:#401008;
           text-decoration: none;
       }
+      pre {
+          color:#A0C060;
+      }
+      ::-webkit-scrollbar {
+          background: #000800;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #000800;
+      }
 
       .bar-header {
           display:flex;
@@ -52,7 +61,6 @@
           margin:7.5px 3.5px;
           color:#801010;
       }
-
       .logo-header {
           height:64px
       }
@@ -67,6 +75,7 @@
           text-align:left;
           font-size:16px;
       }
+
       .navbar-outer {
           min-width:256px;
           float:left;
@@ -102,9 +111,6 @@
       .content-body {
           padding-top:8px;
           padding-bottom:8px;
-          color:#A0C060;
-      }
-      pre {
           color:#A0C060;
       }
       
@@ -194,18 +200,18 @@
             <div class="accordion">│ ├─[]CH0/</div>
             <div class="panel">
               {% for item in site.data.directories.chlogs0 %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[]{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             <div class="accordion">│ └─[]CH1/</div>
             <div class="panel">
               {% for item in site.data.directories.chlogs1 %}
-                <div class="nav-item"><a href="{{ item.url}}">│   └─[]{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│   └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
           </div>
           <!-- Dog Tags -->
-          <div class="accordion">├─[]Dogtags/</div>
+          <div class="accordion">├─[]D-tags/</div>
           <div class="panel">
             <div class="accordion">│ ├─[]C/</div>
             <div class="panel">
@@ -239,7 +245,7 @@
             </div>
           </div>
           <!-- Stories from the Future -->
-          <div class="accordion">├─[]FutureMemories/</div>
+          <div class="accordion">├─[]F-mems/</div>
           <div class="panel">
             <div class="accordion">│ ├─[]E&C/</div>
             <div class="panel">
@@ -251,19 +257,28 @@
               <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
             {% endfor %}
           </div>
-          <!-- Reviews -->
-          <div class="accordion">├─[]Reviews/</div>
+<!--
+          <!-- Stories 
+          <div class="accordion">├─[]Stories/</div>
           <div class="panel">
-            {% for item in site.data.directories.revvg %}
+            {% for item in site.data.directories.story %}
               <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
             {% endfor %}
           </div>
-          <!-- Essays -->
+          <!-- Reviews 
+          <div class="accordion">├─[]Reviews/</div>
+          <div class="panel">
+            {% for item in site.data.directories.revew %}
+              <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
+            {% endfor %}
+          </div>
+          <!-- Essays 
           <div class="accordion">└─[]Essays/</div>
           <div class="panel">
             {% for item in site.data.directories.essay %}
               <div class="nav-item"><a href="{{ item.url}}">  └─(){{item.title}}</a></div></br>
             {% endfor %}
+-->
           </div>
         </div>
       </div>
