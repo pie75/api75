@@ -11,17 +11,17 @@ chlogs1:
   - title: CH11
     url: /a/clogs/CH/1/1
 dlogsc: 
-  - title: Squadron List
-    url: /a/dlogs/c/siblingstructure
-  - title: CCC
-    url: /a/dlogs/c/CCC
+#  - title: Squadron
+#    url: /a/dlogs/c/siblingstructure
+#  - title: CCC
+#    url: /a/dlogs/c/CCC
 dlogsd:
 dlogse:
 dlogsf:
 dlogsg:
 future:
-  - title: MARINES
-    url: /a/future/marines
+#  - title: MARINES
+#    url: /a/future/marines
 EC:
   - title: Starbed
     url: /a/future/E&C/starbed

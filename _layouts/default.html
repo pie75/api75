@@ -44,6 +44,15 @@
           text-decoration: none;
       }
 
+      .bar-header {
+          display:flex;
+          border-style:solid;
+          border-width:0.875px 2px;
+          width:device-width;
+          margin:7.5px 3.5px;
+          color:#801010;
+      }
+
       .logo-header {
           height:64px
       }
@@ -61,14 +70,14 @@
       .navbar-outer {
           min-width:256px;
           float:left;
-          margin-bottom:16px;
       }
       .navbar-inner {
           border-style:solid;
           border-width:0.875px 2px;
-          padding:8px 8px 12px 8px;
+          padding:7.5px 3.5px;
+          margin:1px 1.5px;
           color:#2B3305;
-          margin-right:14px;
+          margin-right:22px;
           font: size 16px;
       }
       
@@ -78,7 +87,7 @@
           border-width:3px 5px;
           font-size:16px;
           line-height-step: 0px;
-          padding:0px 16px;
+          padding:2.5px 11px;
           background-color:#0B1600;
           color:#2B3305;
           overflow:auto;
@@ -124,7 +133,7 @@
           color:#2B3305;
       }
       
-      @media screen and (max-width:668px) {
+      @media screen and (max-width:568px) {
           .logo-header {
               height:100%;
           }
@@ -138,11 +147,13 @@
           .navbar-outer {
               min-width:100%;
               width: 100%;
+              margin-bottom:13px;
           }
           .navbar-inner {
               font-size:32px;
               line-height:27px;
-              margin:0px
+              margin:1px 1.5px;
+              padding:15px 7px;
           }
           .content-bar {
               max-width:100% !important;
@@ -156,7 +167,7 @@
 
   <body style="display:block;background-color:#000800">
     <!-- Title Bar -->
-    <div style="display:flex;border-style:solid;border-width:0.875px 2px;width:device-width;margin:3.5px 7px;color:#801010">
+    <div class="bar-header">
         <img src="/assets/images/Visor_Web.svg" alt="SVG" style="margin:-6px -4px 0px 4px" class="logo-header">
       <h1 style="padding:0px 0px 10px 0px;background-color:#000800;color:#801010">
           <span class="main-header">{{site.title}}</span><br>
@@ -165,7 +176,7 @@
     </div>
 
     <!-- Website -->
-    <div style="padding:12px 7px;width:100%">
+    <div style="padding:6.5px 2px;width:100%">
       <!-- Navigation Bar (Left Side) -->
       <div class="navbar-outer">
         <div class="navbar-inner">
@@ -178,7 +189,7 @@
           <div class="accordion">├─[]C-logs/</div>
           <div class="panel">
             {% for item in site.data.directories.clogs %}
-              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
             {% endfor %}
             <div class="accordion">│ ├─[]CH0/</div>
             <div class="panel">
@@ -199,31 +210,31 @@
             <div class="accordion">│ ├─[]C/</div>
             <div class="panel">
               {% for item in site.data.directories.dlogsc %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             <div class="accordion">│ ├─[]D/</div>
             <div class="panel">
               {% for item in site.data.directories.dlogsd %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             <div class="accordion">│ ├─[]E/</div>
             <div class="panel">
               {% for item in site.data.directories.dlogse %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             <div class="accordion">│ ├─[]F/</div>
             <div class="panel">
               {% for item in site.data.directories.dlogsf %}
-                <div class="nav-item"><a href="{{ item.url}}">│   └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│   └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             <div class="accordion">│ └─[]G/</div>
             <div class="panel">
               {% for item in site.data.directories.dlogsg %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
           </div>
@@ -233,25 +244,25 @@
             <div class="accordion">│ ├─[]E&C/</div>
             <div class="panel">
               {% for item in site.data.directories.EC %}
-                <div class="nav-item"><a href="{{ item.url}}">│ │ └─[>{{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│ │ └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
             {% for item in site.data.directories.future %}
-              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
             {% endfor %}
           </div>
           <!-- Reviews -->
           <div class="accordion">├─[]Reviews/</div>
           <div class="panel">
             {% for item in site.data.directories.revvg %}
-              <div class="nav-item"><a href="{{ item.url}}">│ └─[>{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">│ └─(){{item.title}}</a></div></br>
             {% endfor %}
           </div>
           <!-- Essays -->
           <div class="accordion">└─[]Essays/</div>
           <div class="panel">
             {% for item in site.data.directories.essay %}
-              <div class="nav-item"><a href="{{ item.url}}">  └─[>{{item.title}}</a></div></br>
+              <div class="nav-item"><a href="{{ item.url}}">  └─(){{item.title}}</a></div></br>
             {% endfor %}
           </div>
         </div>
