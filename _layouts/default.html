@@ -52,6 +52,18 @@
       ::-webkit-scrollbar-thumb {
           background: #000800;
       }
+      h1 {
+          background-color:#801010;
+          color:#000800;
+      }
+      h2 {
+          background-color:#801010;
+          color:#000800;
+      }
+      h3 {
+          border-color:#A0C060;
+          color:#A0C060;
+      }
 
       .bar-header {
           display:flex;
@@ -103,10 +115,8 @@
           word-wrap: break-word !important;
           max-width:calc(100% - 256px);
       }
-      .content-title {
+      .content-title{
           margin-top:4px;
-          background-color:#801010;
-          color:#000800;
       }
       .content-body {
           padding-top:8px;
@@ -117,6 +127,7 @@
       .accordion {
           color:#509810;
           cursor:pointer;
+          white-space:pre;
       }
       .accordion:hover{
           color:#A0C060 !important; 
@@ -279,6 +290,15 @@
               <div class="nav-item"><a href="{{ item.url}}">  └─(){{item.title}}</a></div></br>
             {% endfor %}
 -->
+          <!-- Logs -->
+          <div class="accordion">└─[]Logs/</div>
+          <div class="panel">
+            <div class="accordion">  ├─[]MizJam1/</div>
+            <div class="panel">
+              {% for item in site.data.directories.mizjam1 %}
+                <div class="nav-item"><a href="{{ item.url}}">    └─(){{item.title}}</a></div></br>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
