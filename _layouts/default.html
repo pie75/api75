@@ -270,21 +270,22 @@
           </div>
           <div class="accordion">├─[]B-logs/</div>
           <div class="panel">
-            <div class="accordion">  └─[]MizJam1/</div>
+            <div class="accordion">│ └─[]MizJam1/</div>
             <div class="panel">
               {% for item in site.data.directories.mizjam1 %}
-                <div class="nav-item"><a href="{{ item.url}}">    └─(){{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">│   └─(){{item.title}}</a></div></br>
               {% endfor %}
             </div>
           </div>
           <!-- Stories -->
           <div class="accordion">└─[]Stories/</div>
           <div class="panel">
-            <div class="accordion">  ├─[]Poems/</div>
+            <div class="accordion">  └─[]Poems/</div>
             <div class="panel">
               {% for item in site.data.directories.poems %}
-                <div class="nav-item"><a href="{{ item.url}}">  │ └─(){{item.title}}</a></div></br>
+                <div class="nav-item"><a href="{{ item.url}}">    └─(){{item.title}}</a></div></br>
               {% endfor %}
+            </div>
             {% for item in site.data.directories.story %}
               <div class="nav-item"><a href="{{ item.url}}">  └─(){{item.title}}</a></div></br>
             {% endfor %}
