@@ -5,6 +5,8 @@ clogs:
   - title: C0
     url: /a/clogs/C/0
 chlogs0:
+  - title: CH00
+    url: /a/clogs/CH/0/0
   - title: CH01
     url: /a/clogs/CH/0/1
 chlogs1:
@@ -26,6 +28,8 @@ EC:
   - title: Starbed
     url: /a/future/E&C/starbed
 story:
+  - title: Live.
+    url: /a/story/live
 poems:
   - title: Just
     url: /a/story/poems/just
