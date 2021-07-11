@@ -41,8 +41,8 @@ Specifically, Processor Set A, the Text and Linguistic processor onboard.
 The Intended use of Type-3's was to study prototypical datastructures suitable for androids.  
 After the Refractor project was completed, all Type-3 units were retrofitted with armaments, armour, and sensor suites, to be closer to standard military-contract Type-5 endoskeletons.  
   
-`'C-logs'  `contains recorded experiences.  
-`'D-tags'  `contains memory dumps taken from other compatible units.  
-`'F-mems'  `contains data from an unknown, irregularly dated origin.  
-`'B-logs'  `contains records of activities, generally serialised.  
-`'Stories' `contains practices in fiction writing.
+`'C-logs'` &nbsp;contains recorded experiences.  
+`'D-tags'` &nbsp;contains memory dumps taken from other compatible units.  
+`'F-mems'` &nbsp;contains data from an unknown, irregularly dated origin.  
+`'B-logs'` &nbsp;contains records of activities, generally serialised.  
+`'Stories'`&nbsp;contains practices in fiction writing.
