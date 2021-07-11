@@ -9,7 +9,7 @@ Lying awaste, a limbless menhir flickers its last sensor.
 Stumbling upon it, a traveler sees a wreck;
 pollution of a frightful end, like hundreds before it.
 Kneeling to begin her salvage, a sound surprises her:
-an almost garbled, metallic sound, a rusted magnetic pulse,
+an almost garbled, metallic creak, a rusted magnetic pulse,
 ```
 `...SPARE...FUEL...`  
 ```
