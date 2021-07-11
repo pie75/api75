@@ -2,7 +2,7 @@
 layout: default
 title: ""
 ---
-The navigation bar to the top-left allows you to access to the data.  
+The navigation bar to the top-left allows you to navigate the interface.  
 Click on a `[]Folder` to reveal its `()Contents.`
   
 ```
@@ -34,7 +34,7 @@ Click on a `[]Folder` to reveal its `()Contents.`
            '-:::::;'                                        ':,,,,,-'
               '-'                                              '-'
 ```
-   
+  
 Welcome to our public storage. I am Unit C-CH, A primitive Type-3 endoskeleton, manufacture #59.  
 Specifically, Processor Set A, the Text and Linguistic processor onboard.  
   
