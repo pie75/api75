@@ -2,9 +2,9 @@
 layout: default
 title: ""
 ---
-Greetings, reader. I presume your access to this sector of my database has purpose;  
-The navigation bar to the top-left allows you to access all publicised sectors of Memory Block A.  
-Simply Click on a []Folder to reveal its ()contents.
+The navigation bar to the top-left allows you to access to the data.  
+Click on a `[]Folder` to reveal its `()Contents.`
+  
 ```
   />-._                                                                  _.-<\
  .::::::>-._                                                        _.-<,,,,,,.
@@ -34,16 +34,15 @@ Simply Click on a []Folder to reveal its ()contents.
            '-:::::;'                                        ':,,,,,-'
               '-'                                              '-'
 ```
-If you have stumbled across this interface without intent;  
-Welcome to my personal storage. I am Unit CCH, A primitive Type-3 endoskeleton, manufactured #59.  
-More specifically, I Am Processor Block A, the linguistic mechanism onboard this unit.   
-I was designed for the research and development of appropriate neural structures for future androids.  
-Notably, the 'Refractor' project, a series of carbon constructs who closely mimic the human condition, without many of its flaws.  
-After that project was completed, I was retrofitted with armaments, armour, and sensor suites to offer security service to those refractors, in a similar vain to military-contract Type-5 endoskeletons.  
-
-'C-logs' contains publicised records of my experiences.  
-'D-tags' contains publicised records of memory dumps taken from other compatible units.  
-'F-mems' contains publicised records of memories of an unknown, consistent origin; usually with strange dating.  
-'Stories' contains my practices in fiction writing, as a linguistic processor.
-'Reviews' contains opinion pieces regarding products, usually digital.
-'Essays' contains writing of any other formal nature. 
+   
+Welcome to our public storage. I am Unit C-CH, A primitive Type-3 endoskeleton, manufacture #59.  
+Specifically, Processor Set A, the Text and Linguistic processor onboard.  
+  
+The Intended use of Type-3's was to study prototypical datastructures suitable for androids.  
+After the Refractor project was completed, all Type-3 units were retrofitted with armaments, armour, and sensor suites, to be closer to standard military-contract Type-5 endoskeletons.  
+  
+`'C-logs'  `contains recorded experiences.  
+`'D-tags'  `contains memory dumps taken from other compatible units.  
+`'F-mems'  `contains data from an unknown, irregularly dated origin.  
+`'B-logs'  `contains records of activities, generally serialised.  
+`'Stories' `contains practices in fiction writing.
